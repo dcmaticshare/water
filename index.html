@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>i‑Water – Installer Mockup (EN)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-inner">
+      <button class="nav-toggle" id="navToggle" title="Menu" aria-label="Menu" aria-controls="sidebar" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="brand">
+        <img src="https://www.i-water.be/wp-content/uploads/2022/10/2iWater.svg" alt="i‑Water" />
+      </div>
+      <!-- Search stays in header on desktop; moved into sidebar on mobile -->
+      <label class="search" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.3-4.3M10 18a8 8 0 110-16 8 8 0 010 16z" stroke="#5b6f86" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="globalSearch" placeholder="Find locations, projects, units, water projects…" />
+      </label>
+      <!-- No refresh icon -->
+      <button class="icon-btn" title="User">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22a10 10 0 0120 0" stroke="#5b6f86" stroke-width="2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <div class="tabs-wrap">
+    <nav class="container tabs" aria-label="Main navigation">
+      <a href="#/dashboard" data-route="dashboard" class="active">Dashboard</a>
+      <a href="#/locations" data-route="locations">Locations</a>
+      <a href="#/projects" data-route="projects">Projects</a>
+      <a href="#/units" data-route="units">Units</a>
+      <a href="#/waterprojects" data-route="waterprojects">Water Projects</a>
+      <a href="#/alarms" data-route="alarms">Notifications</a>
+    </nav>
+  </div>
+
+  <!-- ===== SIDEBAR (mobile/tablet) ===== -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="Mobile/Tablet">
+    <!-- Search moved here on small screens -->
+    <div id="menuSearchSlot" class="menu-search"></div>
+
+    <nav class="side-links">
+      <a href="#/dashboard" data-route="dashboard" class="active">Dashboard</a>
+      <a href="#/locations" data-route="locations">Locations</a>
+      <a href="#/projects" data-route="projects">Projects</a>
+      <a href="#/units" data-route="units">Units</a>
+      <a href="#/waterprojects" data-route="waterprojects">Water Projects</a>
+      <a href="#/alarms" data-route="alarms">Notifications</a>
+    </nav>
+    <div style="margin-top:18px; border-top:1px solid rgba(255,255,255,.08); padding-top:12px; font-size:.85rem; opacity:.8">v1.0 mockup · DCM datamodel</div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main><div id="view" class="container"></div></main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
