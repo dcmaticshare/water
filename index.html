@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>i‑Water – Installer Mockup (EN)</title>
+  <title>i‑Water – Installation Console</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260717-3">
 </head>
 <body>
 <div class="app" id="app">
@@ -22,12 +22,12 @@
       <!-- Search stays in header on desktop; moved into sidebar on mobile -->
       <label class="search" aria-label="Search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.3-4.3M10 18a8 8 0 110-16 8 8 0 010 16z" stroke="#5b6f86" stroke-width="2" stroke-linecap="round"/></svg>
-        <input id="globalSearch" placeholder="Find locations, projects, units, water projects…" />
+        <input id="globalSearch" placeholder="Find users, locations, projects, units, water projects or settings…" />
       </label>
       <!-- No refresh icon -->
-      <button class="icon-btn" title="User">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22a10 10 0 0120 0" stroke="#5b6f86" stroke-width="2"/></svg>
-      </button>
+      <a class="icon-btn" href="#/users" title="User" aria-label="Open user page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22a10 10 0 0120 0" stroke="#5b6f86" stroke-width="2"/></svg>
+      </a>
     </div>
   </header>
 
@@ -57,13 +57,14 @@
       <a href="#/waterprojects" data-route="waterprojects">Water Projects</a>
       <a href="#/alarms" data-route="alarms">Notifications</a>
     </nav>
-    <div style="margin-top:18px; border-top:1px solid rgba(255,255,255,.08); padding-top:12px; font-size:.85rem; opacity:.8">v1.0 mockup · DCM datamodel</div>
+    <div style="margin-top:18px; border-top:1px solid rgba(255,255,255,.08); padding-top:12px; font-size:.85rem; opacity:.8">i‑Water installation management</div>
   </aside>
 
   <!-- ===== MAIN ===== -->
   <main><div id="view" class="container"></div></main>
 </div>
 
-<script src="app.js"></script>
+<script src="model-data.js?v=20260716-1"></script>
+<script src="app.js?v=20260717-1"></script>
 </body>
 </html>
